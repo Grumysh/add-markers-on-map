@@ -5,6 +5,7 @@ Technologies used:
 - [**Node**](https://nodejs.org/en/)
 - [**Angular**](https://angular.io/)
 - [**Angular Google Maps (AGM)**](https://angular-maps.com/api-docs/agm-core/index.html)
+- [**Angular Material**](https://material.angular.io/)
 
 ## Steps to run in local environment
 
