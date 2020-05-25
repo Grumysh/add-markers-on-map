@@ -40,7 +40,12 @@ export class MapaComponent {
       data: { title: marcador.title, desc: marcador.desc },
     });
     dialogRef.afterClosed().subscribe((result) => {
-      console.log(result);
+      if (result) {
+        marcador.title = result.title;
+        marcador.desc = result.desc;
+        this.saveStorage();
+        this.snackBar.open("Edited Marker", "Close", { duration: 3000 });
+      }
     });
   }
 

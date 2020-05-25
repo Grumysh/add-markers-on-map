@@ -29,5 +29,7 @@ export class EditMapComponent {
     this.dialogRef.close();
   }
 
-  saveChanges() {}
+  saveChanges() {
+    this.dialogRef.close(this.form.value);
+  }
 }
