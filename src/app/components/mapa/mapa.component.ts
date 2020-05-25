@@ -13,14 +13,25 @@ export class MapaComponent implements OnInit {
   lng = -74.2973328;
   zoom = 5;
   constructor() {
-    const nuevoMarcador = new Marcador(4.570868, -74.2973328);
-    this.marcadores.push(nuevoMarcador);
+    if (localStorage.getItem("marcadores")) {
+      this.marcadores = JSON.parse(localStorage.getItem("marcadores"));
+    }
   }
 
   ngOnInit() {}
 
-  addMarker(event){
+  addMarker(event) {
     const nuevoMarcador = new Marcador(event.coords.lat, event.coords.lng);
     this.marcadores.push(nuevoMarcador);
+    this.saveStorage();
+  }
+
+  deleteMarker(index) {
+    this.marcadores.splice(index, 1);
+    this.saveStorage();
+  }
+
+  saveStorage() {
+    localStorage.setItem("marcadores", JSON.stringify(this.marcadores));
   }
 }
