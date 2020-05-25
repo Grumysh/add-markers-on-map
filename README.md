@@ -12,13 +12,13 @@ Technologies used:
 - clone the project
 
 ```shell
-    git clone https://github.com/anlramirezs11/platzivideo
+    git clone https://github.com/anlramirezs11/add-markers-on-map
 ```
 
 - Enter the project folder
 
 ```shell
-     cd platzivideo
+     cd add-markers-on-map
 ```
 
 - Install dependencies
