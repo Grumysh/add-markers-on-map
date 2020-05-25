@@ -36,8 +36,11 @@ export class MapaComponent {
 
   editMarker(marcador: Marcador) {
     const dialogRef = this.dialog.open(EditMapComponent, {
-      width: "300px",
+      width: "230px",
       data: { title: marcador.title, desc: marcador.desc },
+    });
+    dialogRef.afterClosed().subscribe((result) => {
+      console.log(result);
     });
   }
 

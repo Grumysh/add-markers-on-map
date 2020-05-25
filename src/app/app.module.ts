@@ -7,6 +7,7 @@ import { MaterialModule } from "./material.module";
 import { MapaComponent } from "./components/mapa/mapa.component";
 import { AgmCoreModule } from "@agm/core";
 import { EditMapComponent } from "./components/edit-map/edit-map.component";
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   entryComponents: [EditMapComponent],
@@ -15,6 +16,7 @@ import { EditMapComponent } from "./components/edit-map/edit-map.component";
     BrowserModule,
     BrowserAnimationsModule,
     MaterialModule,
+    ReactiveFormsModule,
     AgmCoreModule.forRoot({
       apiKey: "AIzaSyAFn9aZCwhRYEQJiMVS_AjV6XcYELy9zXs",
     }),

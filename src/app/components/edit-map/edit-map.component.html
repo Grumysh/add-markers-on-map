@@ -1,1 +1,15 @@
-<p>edit-map works!</p>
+<form [formGroup]="form">
+    <mat-form-field class="example-full-width">
+        <mat-label>Title</mat-label>
+        <input matInput placeholder="Ex. Home" formControlName="title">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+        <mat-label>Description</mat-label>
+        <textarea rows="3" matInput placeholder="Ex. This marker is my home...." formControlName="desc"></textarea>
+    </mat-form-field>
+    <div>
+        <button (click)="saveChanges()" mat-raised-button color="primary">Edit</button>
+        <button (click)="onNoClick()" type="button" mat-raised-button color="warm">Cancel</button>
+    </div>
+</form>
