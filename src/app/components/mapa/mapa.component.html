@@ -10,7 +10,7 @@
                         {{marcador.desc}}
                     </p>
                     <div>
-                        <button mat-raised-button color="primary">Edit</button>
+                        <button (click)="editMarker(marcador)" mat-raised-button color="primary">Edit</button>
                         <button (click)="deleteMarker(i)" mat-raised-button color="warm">Delete</button>
                     </div>
                 </agm-info-window>
