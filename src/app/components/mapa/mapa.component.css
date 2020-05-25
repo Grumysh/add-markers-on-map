@@ -1,0 +1,10 @@
+.container {
+  width: 80%;
+  margin: 50px auto;
+}
+agm-map {
+  height: 600px;
+}
+strong, p{
+    color: black;
+}
