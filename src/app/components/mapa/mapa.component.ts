@@ -21,6 +21,7 @@ export class MapaComponent {
     } else {
       const nuevoMarcador = new Marcador(this.lat, this.lng);
       this.marcadores.push(nuevoMarcador);
+      this.saveStorage();
     }
   }
 
