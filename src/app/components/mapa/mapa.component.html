@@ -1,5 +1,9 @@
 <mat-card class="container">
     <mat-card-title>Map</mat-card-title>
+    <p class="note">
+        To add points you will have to click on the map and the marker will automatically be added, it can be edited to
+        customize the title and description, and you can delete the marker.
+    </p>
     <mat-card-content>
         <agm-map (mapClick)="addMarker($event)" [latitude]="lat" [longitude]="lng" [zoom]="zoom">
             <agm-marker *ngFor="let marcador of marcadores; let i =index" [latitude]="marcador.lat"

@@ -18,6 +18,9 @@ export class MapaComponent {
   constructor(private snackBar: MatSnackBar, public dialog: MatDialog) {
     if (localStorage.getItem("marcadores")) {
       this.marcadores = JSON.parse(localStorage.getItem("marcadores"));
+    } else {
+      const nuevoMarcador = new Marcador(this.lat, this.lng);
+      this.marcadores.push(nuevoMarcador);
     }
   }
 
